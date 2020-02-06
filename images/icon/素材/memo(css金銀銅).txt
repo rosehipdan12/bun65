@@ -1,0 +1,84 @@
+<style type="text/css">
+<!--
+/*----------------------------------------
+.ranked_1 {
+	width:100px;
+	height:100px;
+	background-image: url("../../images/icon/素材/金.png");
+	background-size: cover;
+}
+.ranked_2 {
+	width:100px;
+	height:100px;
+	background-image: url("../../images/icon/素材/銀.png");
+	background-size: cover;
+}
+.ranked_3 {
+	width:100px;
+	height:100px;
+	background-image: url("../../images/icon/素材/銅.png");
+	background-size: cover;
+}
+----------------------------------------*/
+.ranked_1 {
+	width:100px;
+	height:100px;
+	background-image: linear-gradient(#DA8E00, #EDAC06, #F7DE05, #DA8E00, #EDAC06);
+}
+.ranked_2 {
+	width:100px;
+	height:100px;
+	background-image: linear-gradient(#A5A5A5, #BABAC2, #E8E8E8, #A5A5A5, #BABAC2);
+}
+.ranked_3 {
+	width:100px;
+	height:100px;
+	background-image: linear-gradient(#8C4841, #ac6b25, #c49a6a, #8C4841, #ac6b25);
+}
+.g01 {background-color: #DA8E00;}
+.g02 {background-color: #EDAC06;}
+.g03 {background-color: #F7DE05;}
+.g04 {background-color: #DA8E00;}
+.g05 {background-color: #EDAC06;}
+.s01 {background-color: #A5A5A5;}
+.s02 {background-color: #BABAC2;}
+.s03 {background-color: #E8E8E8;}
+.s04 {background-color: #A5A5A5;}
+.s05 {background-color: #BABAC2;}
+.b01 {background-color: #8C4841;}
+.b02 {background-color: #ac6b25;}
+.b03 {background-color: #c49a6a;}
+.b04 {background-color: #8C4841;}
+.b05 {background-color: #ac6b25;}
+-->
+</style>
+
+<table border>
+	<tr>
+		<td class="g01">　.</td>
+		<td class="g02">　.</td>
+		<td class="g03">　.</td>
+		<td class="g04">　.</td>
+		<td class="g05">　.</td>
+		<td class="g06">　.</td>
+		<td class="g07">　.</td>
+	</tr>
+	<tr>
+		<td class="s01">　.</td>
+		<td class="s02">　.</td>
+		<td class="s03">　.</td>
+		<td class="s04">　.</td>
+		<td class="s05">　.</td>
+		<td class="s06">　.</td>
+		<td class="s07">　.</td>
+	</tr>
+	<tr>
+		<td class="b01">　.</td>
+		<td class="b02">　.</td>
+		<td class="b03">　.</td>
+		<td class="b04">　.</td>
+		<td class="b05">　.</td>
+		<td class="b06">　.</td>
+		<td class="b07">　.</td>
+	</tr>
+</table>

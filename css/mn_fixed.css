@@ -1,0 +1,257 @@
+/***********************************************************************
+/*	＜総合文化展＞	mn_fixed.css
+/*	
+/*		概  要：外部ファイル
+/*
+/*		備  考：なし
+/*
+/*		Code By		2016/02/01	System Nicol Co.,Ltd	新規
+/*
+/*		Copyright (c) 2016 System Nicol Co.,Ltd All rights reserved.
+/**********************************************************************/
+@charset "utf-8";
+/*----------------------------------------------------*-
+-*==> [public]: Fixed-Style
+-*----------------------------------------------------*/
+body.Fixed_body {
+	margin: 0px;
+	padding: 126px 0px 26px 0px;
+	width: 100%; height:100%;
+	overflow: auto;
+}
+div.Fixed_Head {
+	width: 100%; height: 126px;
+	position: fixed !important;
+	position: absolute; top: 0px; left: 0px;
+	overflow: auto;
+}
+div.Fixed_Foot {
+	width: 100%; height: 26px;
+	position: fixed !important;
+	position: absolute; bottom: 0px; left: 0px;
+	overflow: hidden;
+}
+div.Fixed_Cont {
+	width: 100%; height: auto;
+	position: fixed !important;
+	position: absolute; top: 126px; left: 0px; bottom: 26px;
+	overflow: auto;
+}
+* html div.Fixed_Cont {
+	width: 100%; height: 100%;
+}
+
+/*----------------------------------------------------*-
+-*==> [public]: Fixed_Head … height: 126px = 26px + 40px + (25px + 35px)
+-*----------------------------------------------------*/
+
+/*> header-state
+-*------------------------------*/
+#headstatBground {
+	background-color: #3aa6d5;
+	width: 100%;
+	height: 26px;
+}
+#headstatBground .headstat {
+	background-color: #3aa6d5;
+	max-width:1800px;
+	min-width: 320px;
+	margin: 0px auto 0px auto;
+}
+#headstatBground .headstat p {
+	background-color: #3aa6d5;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 26px;
+}
+
+/*> header-main
+-*------------------------------*/
+#headmainBground {
+	background-color: #0f3d71;
+	width: 100%;
+	height: 44px;
+}
+#headmainBground .headmain {
+	color: #FFFFFF;
+	margin: 0px auto 0px auto;
+	max-width:1800px;
+}
+#headmainBground .headmain h1 {
+	color: #eac435;
+	font-size: 20px;
+	line-height: 44px;
+	float: left;
+}
+#headmainBground .headmain a {
+	color: #eac435;
+	text-decoration: none;
+}
+#headmainBground .headevent{
+	background-color: #0f3d71;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	float: right;
+	padding: 4px;
+}
+/*> header-navigation
+-*------------------------------*/
+#headnaviBground {
+	background-color: #447db5;
+	width: 100%;
+	height: 25px;
+}
+#headnaviBground .headnavi {
+	background-color: #447db5;
+	color: #FFFFFF;
+	max-width:1800px;
+	min-width: 320px;
+	margin: 0px auto 0px auto;
+}
+#headnaviBground .headnavi p{
+	background-color: #447db5;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 25px;
+}
+/*-#------------------#-*/
+#headmenuBground {
+/*	background-color: #3aa6d5;*/
+	width: 100%;
+	height: 35px;
+}
+#headmenuBground .headmenu {
+/*	background-color: #3aa6d5;*/
+	color: #FFFFFF;
+	max-width:1800px;
+	min-width: 320px;
+	margin: 0px auto 0px auto;
+}
+#headmenuBground .headmenu p{
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 35px;
+	font-weight: bold;
+}
+/*-#------------------#-*/
+/*-# header-navi-menu #-*/
+/*-#------------------#-*/
+#headnaviBground .headnavi p:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+ul.navimenu {
+	position: relative;
+	float: left;
+	list-style: none;
+}
+ul.navimenu li {
+	float: left;
+	line-height: 25px;
+	margin-right:  2px;
+    border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+ul.navimenu li.nv_str {
+	color: #444444;
+}
+.top {
+	background-color: #2196F3;
+}
+.ex{
+	background-color: #673AB7;
+}
+.kids{
+	background-color: #795548;
+}
+.enj{
+	background-color: #FF5722;
+}
+.rank{
+	background-color: #00BCD4;
+}
+ul.navimenu li.nv_pan {
+	background-color: #2F4F4F;
+}
+ul.navimenu li.active {
+}
+ul.navimenu li a {
+	padding-left: 15px;
+	padding-right:15px;
+	text-decoration: none;
+	color: #FFFFFF;
+	display: block;
+}
+ul.navimenu li a:hover {
+	background-color: rgba(0,0,0,0.2);
+    border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+ul.navimenu li a.an_tab:hover {
+	cursor: default;
+	text-decoration: none;
+}
+ul.navimenu li a.an_anc:hover {
+	cursor: •pointer;
+	text-decoration: underline;
+}
+ul.navimenu li dd.nv_hid {
+	position: absolute;
+	float: left;
+	left: 0px;
+	padding-top:    10px;
+}
+
+/*----------------------------------------------------*-
+-*==> [public]: Fixed_Cont … height: auto
+-*----------------------------------------------------*/
+#contmainBground {
+	background-color: transparent;
+	width: 100%;
+	height: auto;
+}
+#contmainBground .contmain {
+	background-color: transparent;
+	color: #000000;
+	max-width:1800px;
+	margin: 0px auto 0px auto;
+}
+
+/*----------------------------------------------------*-
+-*==> [public]: Fixed_Foot … height: 26px
+-*----------------------------------------------------*/
+
+/*> footer-main
+-*------------------------------*/
+#footmainBground {
+	background-color: #0f3d71;
+	width: 100%;
+	height: 26px;
+}
+#footmainBground .footmain {
+	background-color: #0f3d71;
+	color: #FFFFFF;
+	max-width:1800px;
+	min-width: 320px;
+	margin: 0px auto 0px auto;
+}
+#footmainBground .footmain p {
+	background-color: #0f3d71;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 26px;
+}
+#footmainBground .footmain a {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 12px;
+}
+#footmainBground .footmain p#footmainSpec {
+	font-size: 9px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
