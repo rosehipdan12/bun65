@@ -72,7 +72,7 @@ header("Pragma: no-cache");
 		<form name="F_STT" method="post" autocomplete="off" accept-charset="utf-8">
 			<div class="row float-right">
 					<div id="LOG_GRP_OUT" class="">
-						<input type="button" id="LOG_BTN_OUT" class="w80 h26 floatRight roundbuton" value="ログアウト" onClick="Click_LOGOUT();">
+						<input type="button" id="LOG_BTN_OUT" class="w80 h26" value="ログアウト" onClick="Click_LOGOUT();">
 					</div>
 		
 			</div>

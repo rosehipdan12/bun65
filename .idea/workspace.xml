@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b7b0787-43be-482f-a5f5-1d466d410464" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="044e3dcb-6a2d-4681-b37f-13f492e2b0eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mnt/chk1.php" beforeDir="false" afterPath="$PROJECT_DIR$/mnt/chk1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mnt/entry1.php" beforeDir="false" afterPath="$PROJECT_DIR$/mnt/entry1.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,61 +16,101 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - bun@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1Xbf1FMdwKzSZq4RTI0eZHxwbp6" />
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
+  <component name="ProjectId" id="1XPoSUjrSXDI42afg7WTZpPOSAC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql.8" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/bun65" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7b7b0787-43be-482f-a5f5-1d466d410464" name="Default Changelist" comment="" />
-      <created>1581319499809</created>
+      <changelist id="044e3dcb-6a2d-4681-b37f-13f492e2b0eb" name="Default Changelist" comment="" />
+      <created>1580957091974</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1581319499809</updated>
-      <workItem from="1581319507241" duration="9238000" />
-      <workItem from="1581384985825" duration="11069000" />
+      <updated>1580957091974</updated>
+      <workItem from="1580957096081" duration="18002000" />
+      <workItem from="1581037996507" duration="17583000" />
+      <workItem from="1581299576668" duration="24293000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="WindowStateProjectService">
+    <state x="168" y="71" key="#SQL_Dialects" timestamp="1580957424839">
+      <screen x="0" y="0" width="1152" height="824" />
+    </state>
+    <state x="168" y="71" key="#SQL_Dialects/0.0.1152.824@0.0.1152.824" timestamp="1580957424839" />
+    <state x="60" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580977053251">
+      <screen x="0" y="0" width="1152" height="824" />
+    </state>
+    <state x="60" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1152.824@0.0.1152.824" timestamp="1580977053251" />
+    <state x="265" y="87" key="CommitChangelistDialog2" timestamp="1581316864886">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="265" y="87" key="CommitChangelistDialog2/0.0.1280.984@0.0.1280.984" timestamp="1581316864886" />
+    <state x="356" y="168" key="FileChooserDialogImpl" timestamp="1580975648178">
+      <screen x="0" y="0" width="1152" height="824" />
+    </state>
+    <state x="356" y="168" key="FileChooserDialogImpl/0.0.1152.824@0.0.1152.824" timestamp="1580975648178" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1580975677364">
+      <screen x="0" y="0" width="1152" height="824" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1152.824@0.0.1152.824" timestamp="1580975677364" />
+    <state x="308" y="283" key="com.intellij.ide.util.TipDialog" timestamp="1581299602774">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="277" y="237" key="com.intellij.ide.util.TipDialog/0.0.1152.824@0.0.1152.824" timestamp="1580957096088" />
+    <state x="308" y="283" key="com.intellij.ide.util.TipDialog/0.0.1280.984@0.0.1280.984" timestamp="1581299602774" />
+    <state x="272" y="12" width="735" height="961" key="find.popup" timestamp="1581327165787">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="245" y="10" width="661" height="804" key="find.popup/0.0.1152.824@0.0.1152.824" timestamp="1580964031462" />
+    <state x="272" y="12" width="735" height="961" key="find.popup/0.0.1280.984@0.0.1280.984" timestamp="1581327165787" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/mn_set_menu.js</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

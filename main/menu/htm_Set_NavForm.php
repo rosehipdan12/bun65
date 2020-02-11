@@ -63,97 +63,19 @@ if (isset($_SESSION[DF_SSN_LOGIN_MD])) {
 ?>
 <xml_NavFormData>
     <reHtml>
-        <!-- ******************TEST NAVBAR****************-->
         <script>
-            function openNav() {
-                //var navbar = document.getElementById("mySidenav");
-                //navbar.style.width = "auto";
-                //navbar.style.display="block";
+            function myFunction() {
+                var x = document.getElementById("topNavBar");
+                if (x.className === "navimenu") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topNavBar";
+                }
             }
-
-            function closeNav() {
-                //var navbar = document.getElementById("mySidenav");
-                //navbar.style.width = "0px";
-                //navbar.style.display="none";
-            }
-            $(document).ready(function() {
-                $("#openBtn").click(function(){
-                    $("#mySidenav").css({"width": "250px"});
-                });
-                $("#closeBtn").click(function(){
-                    $("#mySidenav").css({"width": "0px"});
-
-                });
-            });
         </script>
-
-
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" id="closeBtn" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="javascript:void(0);"
-               onClick="SET_PAGE(&#39;SET_DF&#39;, &#39;LS_I01&#39;)">&nbsp投票方法
-            </a>
-
-
-            <div>
-                <button class="dropdown-btn">&nbspエキスパート部門
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-container">
-                    <a href="javascript:void(0);"
-                       onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P01&#39;);">&nbsp絵画</a>
-                    <a href="javascript:void(0);"
-                       onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P02&#39;);">&nbsp書道</a>
-                    <a href="javascript:void(0);"
-                       onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P03&#39;);">&nbsp写真</a>
-                    <a href="javascript:void(0);"
-                       onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P04&#39;);">&nbsp手芸・工芸</a>
-                </div>
-            </div>
-
-
-            <div>
-                <button class="dropdown-btn">&nbspエンジョイ部門
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-container">
-                    <a href="javascript:void(0);"
-                       onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P01&#39;);">&nbsp写真</a>
-                    <a href="javascript:void(0);"
-                       onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P02&#39;);">&nbsp絵画</a>
-                    <a href="javascript:void(0);"
-                       onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P01&#39;);">&nbsp音楽</a>
-                    <a href="javascript:void(0);"
-                       onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P01&#39;);">&nbsp動画</a>
-                </div>
-            </div>
-<div>
-    <button class="dropdown-btn">&nbspエンジョイ部門
-        <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a href="javascript:void(0);"
-           onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P01&#39;);">&nbsp写真</a>
-        <a href="javascript:void(0);" class="an_anc"
-           onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P02&#39;);">&nbsp絵画</a>
-        <a href="javascript:void(0);" class="an_anc"
-           onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P01&#39;);">&nbsp音楽</a>
-        <a href="javascript:void(0);" class="an_anc"
-           onclick="SET_PAGE(&#39;SET_RI&#39;, &#39;LS_P01&#39;);">&nbsp動画</a>
-    </div>
-</div>
-
-
-            <a href="javascript:void(0);" class="an_anc"
-               onclick="SET_PAGE(&#39;SET_DF&#39;, &#39;LS_R01&#39;);">投票ランキング</a>
-        </div>
-        <!-- ****************TEST NAVBAR END****************** -->
         <form name="F_NAV" method="post" autocomplete="off" accept-charset="utf-8">
-            <span id="openBtn" style="font-size:30px;cursor:pointer" class="floatRight resButton" onclick="openNav()">&#9776;</span>
-
-            <nav class="navbar navbar-default pt0 pb0">
+         <nav class="navbar navbar-default pt0">
                 <ul class="navimenu" id="topNavBar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <li class="nv_tab top active">
                         <dl>
                             <dt class="nv_ttl"><a href="javascript:void(0);" class="an_anc"
@@ -231,23 +153,9 @@ if (isset($_SESSION[DF_SSN_LOGIN_MD])) {
                     </li>
                 </ul>
             </nav>
-        </form>
-        <script>
-            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-            var dropdown = document.getElementsByClassName("dropdown-btn");
-            var i;
 
-            for (i = 0; i < dropdown.length; i++) {
-                dropdown[i].addEventListener("click", function () {
-                    this.classList.toggle("active");
-                    var dropdownContent = this.nextElementSibling;
-                    if (dropdownContent.style.display === "block") {
-                        dropdownContent.style.display = "none";
-                    } else {
-                        dropdownContent.style.display = "block";
-                    }
-                });
-            }
-        </script>
+
+        </form>
+
     </reHtml>
 </xml_NavFormData>

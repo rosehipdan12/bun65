@@ -35,9 +35,9 @@ function SET_MENU() {
 	
 	if (str_stt != "Err") {
 		
-		if (str_adm == "1"){
-			window.location.href = '../bun65/mnt/entry1.php';
-		}
+		// if (str_adm == "1"){
+		// 	window.location.href = '../bun65/mnt/entry1.php';
+		// }
 
 		//---------------------//
 		// 設置：

@@ -1,0 +1,5 @@
+[2020-01-31 06:01:49][DEBUG] Import successful! (6 users)
+[2020-01-31 06:01:58][DEBUG] Import successful! (6 users)
+[2020-01-31 06:01:01][ERROR] Wrong header format
+[2020-01-31 06:01:05][ERROR] SUCCESS: 0 users; ERROR: 10 users (UserID: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+[2020-01-31 06:01:28][ERROR] SUCCESS: 4 users; ERROR: 3 users (UserID: ggam, ji, hmc5)

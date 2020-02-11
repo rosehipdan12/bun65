@@ -15,7 +15,7 @@ switch ( "unyo" ){
 		$envDbServer		= "localhost";		//* データベースサーバ名
 		$envDbUser			= "root";		//* データベースユーザ
 		//$envDbUserPass		= "FJ3kjc9tckjecth3";		//* データベースユーザのパスワード
-		$envDbUserPass		= "Aa23456@789";
+		$envDbUserPass		= "";
 		$envDbName			= "bun";			//* スキーマ名
 		break;
 

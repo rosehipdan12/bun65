@@ -22,6 +22,7 @@ header("Pragma: no-cache");
 /*					$NowTime		：時刻
 /**********************************************************************/
 	//セッション開始・再開
+    ini_set("session.cookie_httponly", 1);
 	session_start();
 	//外部スクリプト読み込み
 	require_once "./main/com/require_set_env.php";
@@ -60,9 +61,9 @@ header("Pragma: no-cache");
 
 
 <title><?php echo Func_SetEncDate(DF_STR_SYS_NAME, "&nbsp;", "&nbsp;"); ?></title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">-->
+<!--  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">-->
 
 <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/prettyPhoto.css" media="screen" />
 <!--<link rel="stylesheet" type="text/css" charset="utf-8" href="./css/mn_parts.css" />-->
@@ -94,12 +95,8 @@ header("Pragma: no-cache");
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
-    <script
-            src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
-            integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
-            crossorigin="anonymous"></script>
-    <script>
-        <script type="text/javascript" charset="utf-8" src="./js/jquery.prettyPhoto.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="./js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" charset="utf-8" src="./js/mn_com_script.js"></script>
     <script type="text/javascript" charset="utf-8" src="./js/mn_set_menu.js"></script>
     <script type="text/javascript" charset="utf-8" src="./js/mn_set_page.js"></script>
@@ -134,80 +131,83 @@ header("Pragma: no-cache");
     </script>
 </head>
 
-<body >
-<div class="container ml0 mr0 ">
-    <!-- ========================================================== -->
-    <!-- Head_Area：Header											-->
-    <!-- ========================================================== -->
-    <div id="Head_Area" class="wF row">
-
-        <div id="headmainBground">
-            <div class="headmain pl20 pr20" >
-                <h1>
-                    <a href="index.php" title="<?php echo Func_SetEncDate(DF_STR_SYS_NAME, "&nbsp;", "&nbsp;"); ?>"><?php echo Func_SetEncDate(DF_STR_SYS_TITL, "&nbsp;", "<br>"); ?></a>
-                </h1>
-            </div>
-            <!--        <div class="headevent">-->
-            <!--            全富士通労働組合連合会結成 50周年記念行事<br>-->
-            <!--            富士通労働組合単一組織結成 70周年記念事業-->
-            <!--        </div>-->
-            <!--        --><?php //if ($str_uid != "") {
-            //            echo '<div id="LOG_GRP_OUT" class="floatRight">
-            //            <input type="button" id="LOG_BTN_OUT" class="w80 h26" value="ログアウト" onClick="Click_LOGOUT();">
-            //        </div>';
-            //        };?>
+<body class="Fixed_body">
+<!-- ========================================================== -->
+<!-- Head_Area：Header											-->
+<!-- ========================================================== -->
+<div id="Head_Area" class="Fixed_Head">
+	<div id="headstatBground">
+		<div class="headstat pl20 pr20">
+			<p></p>
+		</div>
+	</div>
+	<div id="headmainBground">
+		<div class="headmain pl20 pr20" >
+			<h1>
+				<a href="index.php" title="<?php echo Func_SetEncDate(DF_STR_SYS_NAME, "&nbsp;", "&nbsp;"); ?>"><?php echo Func_SetEncDate(DF_STR_SYS_TITL, "&nbsp;", "<br>"); ?></a>
+			</h1>
+		</div>
+<!--        <div class="headevent">-->
+<!--            全富士通労働組合連合会結成 50周年記念行事<br>-->
+<!--            富士通労働組合単一組織結成 70周年記念事業-->
+<!--        </div>-->
+<!--        --><?php //if ($str_uid != "") {
+//            echo '<div id="LOG_GRP_OUT" class="floatRight">
+//            <input type="button" id="LOG_BTN_OUT" class="w80 h26" value="ログアウト" onClick="Click_LOGOUT();">
+//        </div>';
+//        };?>
+	</div>
+	<div id="headnaviBground" >
+		<div class="headnavi pl20 pr20 " >
+			<p></p>
+		</div>
+	</div>
+    <div id="headmenuBground">
+        <div class="headmenu pl20 pr20">
         </div>
-        <div id="headnaviBground" >
-            <div class="headnavi pl20 pr20 " >
-                <p></p>
-            </div>
+    </div>
+</div><!-- /Header -->
+
+<!-- ========================================================== -->
+<!-- Cont_Area：Contents										-->
+<!-- ========================================================== -->
+<div id="Cont_Area" class="Fixed_Cont"><a name="TOP"></a>
+
+
+	<div id="contmainBground">
+		<div class="contmain pl10 pr10">
+			<div id="contpostDrawing"></div>
+		</div>
+        <div class="event">
+            <p>全富士通労働組合連合会結成 50周年記念行事</p>
+            <p>富士通労働組合単一組織結成 70周年記念事業</p>
         </div>
-        <div id="headmenuBground">
-            <div class="headmenu pl20 pr20">
-            </div>
-        </div>
-    </div><!-- /Header -->
+	</div>
+</div><!-- /Contents -->
 
-    <!-- ========================================================== -->
-    <!-- Cont_Area：Contents										-->
-    <!-- ========================================================== -->
-    <div id="Cont_Area" class="Fixed_Cont row"><a name="TOP"></a>
+<!-- ========================================================== -->
+<!-- Foot_Area：Footer											-->
+<!-- ========================================================== -->
+<div id="Foot_Area" class="Fixed_Foot">
+	<div id="footmainBground">
+		<div class="footmain pl20 pr20 clearfix">
+			<p id="footmainLeft" class="floatLeft">
 
-        <div id="contmainBground">
-            <div class="contmain pl10 pr10">
-                <div id="contpostDrawing"></div>
-            </div>
-            <div class="event">
-                <p>全富士通労働組合連合会結成 50周年記念行事</p>
-                <p>富士通労働組合単一組織結成 70周年記念事業</p>
-            </div>
-        </div>
-    </div><!-- /Contents -->
-
-    <!-- ========================================================== -->
-    <!-- Foot_Area：Footer											-->
-    <!-- ========================================================== -->
-    <div id="Foot_Area" class="Fixed_Foot">
-        <div id="footmainBground">
-            <div class="footmain pl20 pr20 clearfix">
-                <p id="footmainLeft" class="floatLeft">
-
-                    <?php echo Func_SetEncDate(DF_EN_COPYRIGHT, "<br>", "&nbsp;"); ?>
-
-                </p>
-                <!--			<p id="footmainSpec" class="floatLeft">-->
-                <!--				--><?php //echo Func_SetEncDate(DF_EN_RECOMMEND, "<br>", "&nbsp;"); ?>
-                <!--			</p>-->
-                <p id="footmainRight" class="floatRight">
-                    <a href="#TOP"><img src="./files/tri_U_Red.png" height="12" width="12" alt="矢印">先頭へ戻る</a>
-                </p>
-            </div>
-        </div>
-    </div><!-- /Footer -->
-    <form name="F999" method="post" autocomplete="off" accept-charset="utf-8">
-        <input type="hidden" name="MSG" id="I_MSG" value="<?php echo Func_SetEncDate($str_msg, "", "\n"); ?>">
-    </form>
-</div>
+				<?php echo Func_SetEncDate(DF_EN_COPYRIGHT, "<br>", "&nbsp;"); ?>
+				
+			</p>
+<!--			<p id="footmainSpec" class="floatLeft">-->
+<!--				--><?php //echo Func_SetEncDate(DF_EN_RECOMMEND, "<br>", "&nbsp;"); ?>
+<!--			</p>-->
+			<p id="footmainRight" class="floatRight">
+				<a href="#TOP"><img src="./files/tri_U_Red.png" height="12" width="12" alt="矢印">先頭へ戻る</a>
+			</p>
+		</div>
+	</div>
+</div><!-- /Footer -->
+<form name="F999" method="post" autocomplete="off" accept-charset="utf-8">
+	<input type="hidden" name="MSG" id="I_MSG" value="<?php echo Func_SetEncDate($str_msg, "", "\n"); ?>">
+</form>
 
 
 

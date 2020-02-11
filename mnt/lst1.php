@@ -222,7 +222,7 @@ if (isset($_POST['inName'])) {
 
         // MySQLに対する処理
 
-        mysqli_set_charset('utf8', $link);
+        mysqli_set_charset($link,'utf8' );
 
         $sql = "select *,"
             . "(case E_BM_CODE when  'B01' then '写真'"
