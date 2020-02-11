@@ -30,6 +30,12 @@ header("Pragma: no-cache");
 	//+----------------------
 	$str_msg = "";
 	$str_stt = "";
+    $str_uid = "";
+    if (isset($_SESSION[DF_SSN_LOGIN_ID])) {
+        $str_uid = RTrim($_SESSION[DF_SSN_LOGIN_ID]);
+    } else {
+        $str_uid = "";
+    }
 	//--
 	$NowDate = date("Y-m-d");
 	$NowTime = date("H:i:s");
@@ -57,125 +63,154 @@ header("Pragma: no-cache");
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+
 <link rel="stylesheet" type="text/css" charset="utf-8" href="./css/prettyPhoto.css" media="screen" />
-<link rel="stylesheet" type="text/css" charset="utf-8" href="./css/mn_parts.css" />
-<link rel="stylesheet" type="text/css" charset="utf-8" href="./css/mn_fixed.css" />
-<link rel="stylesheet" type="text/css" charset="utf-8" href="./css/mn_style.css" />
+<!--<link rel="stylesheet" type="text/css" charset="utf-8" href="./css/mn_parts.css" />-->
+<!--<link rel="stylesheet" type="text/css" charset="utf-8" href="./css/mn_fixed.css" />-->
+<!--<link rel="stylesheet" type="text/css" charset="utf-8" href="./css/mn_style.css" />-->
+
+<link rel="stylesheet" type="text/css" charset="utf-8" href="./files/mn_parts.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" href="./files/mn_fixed.css" />
+<link rel="stylesheet" type="text/css" charset="utf-8" href="./files/mn_style.css" />
+
+
 <!-- VIDEOJS-->
   <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
 
 
 <style type="text/css">
-<!-- -->
+    input[type=password] {
+        width:208px;
+        height: 22px;
+    }
+    input[type=text] {
+        /*width:210px;*/
+    }
 </style>
 <noscript>JavaScriptがサポートされていません。</noscript>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/mn_com_script.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/mn_set_menu.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/mn_set_page.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/video-player.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/popcorn.js"></script>
-
-
-<!-- VIDEOJS-->
-<script type="text/javascript" charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
+            integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
+            crossorigin="anonymous"></script>
+    <script>
+        <script type="text/javascript" charset="utf-8" src="./js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./js/mn_com_script.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./js/mn_set_menu.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./js/mn_set_page.js"></script>
 
 
-<!--
-$(document).ready( function() { ON_LOAD(); } );
-/*******************************************************
-* ON_LOAD：ロード処理
-*******************************************************/
-function ON_LOAD() {
-	if (document.F999.MSG.value != "") {
-		alert(document.F999.MSG.value);
-	} else {
-		SET_MENU();
-	}
-	return false;
-}
+<!--    <script type="text/javascript" charset="utf-8" src="./files/mn_com_script.js"></script>-->
+<!--    <script type="text/javascript" charset="utf-8" src="./files/mn_set_menu.js"></script>-->
+<!--    <script type="text/javascript" charset="utf-8" src="./files/mn_set_page.js"></script>-->
 
-//-->
-</script>
+    <script type="text/javascript" charset="utf-8" src="./js/video-player.js"></script>
+
+
+    <!-- VIDEOJS-->
+    <script type="text/javascript" charset="utf-8">
+
+
+        <!--
+        $(document).ready( function() { ON_LOAD(); } );
+        /*******************************************************
+         * ON_LOAD：ロード処理
+         *******************************************************/
+        function ON_LOAD() {
+            if (document.F999.MSG.value != "") {
+                alert(document.F999.MSG.value);
+            } else {
+                SET_MENU();
+            }
+            return false;
+        }
+
+        //-->
+    </script>
 </head>
 
-<body class="Fixed_body">
-<!-- ========================================================== -->
-<!-- Head_Area：Header											-->
-<!-- ========================================================== -->
-<div id="Head_Area" class="flex-container">
-	<div id="headstatBground">
-		<div class="headstat pl20 pr20">
-			<p></p>
-		</div>
-	</div>
-	<div id="headmainBground">
-		<div class="headmain pl20 pr20" >
-			<h1>
-				<a href="index.php" title="<?php echo Func_SetEncDate(DF_STR_SYS_NAME, "&nbsp;", "&nbsp;"); ?>"><?php echo Func_SetEncDate(DF_STR_SYS_TITL, "&nbsp;", "<br>"); ?></a>
-			</h1>
-		</div>
-	</div>
-	<div id="headnaviBground" >
-	<!-- style="
-    margin: auto;
-  width: 50%;
-"
--->
-		<div class="headnavi pl20 pr20 " >
-			<p></p>
-		</div>
-	</div>
-	<div id="headmenuBground">
-		<div class="headmenu pl20 pr20">
-			<p></p>
-		</div>
-	</div>
-</div><!-- /Header -->
+<body >
+<div class="container ml0 mr0 ">
+    <!-- ========================================================== -->
+    <!-- Head_Area：Header											-->
+    <!-- ========================================================== -->
+    <div id="Head_Area" class="wF row">
 
-<!-- ========================================================== -->
-<!-- Cont_Area：Contents										-->
-<!-- ========================================================== -->
-<div id="Cont_Area" class="container ml0 pt10"><a name="TOP"></a>
-	<div id="contmainBground">
-		<div class="contmain  ">
-			<div id="contpostDrawing"></div>
-		</div>
-	</div>
-</div><!-- /Contents -->
+        <div id="headmainBground">
+            <div class="headmain pl20 pr20" >
+                <h1>
+                    <a href="index.php" title="<?php echo Func_SetEncDate(DF_STR_SYS_NAME, "&nbsp;", "&nbsp;"); ?>"><?php echo Func_SetEncDate(DF_STR_SYS_TITL, "&nbsp;", "<br>"); ?></a>
+                </h1>
+            </div>
+            <!--        <div class="headevent">-->
+            <!--            全富士通労働組合連合会結成 50周年記念行事<br>-->
+            <!--            富士通労働組合単一組織結成 70周年記念事業-->
+            <!--        </div>-->
+            <!--        --><?php //if ($str_uid != "") {
+            //            echo '<div id="LOG_GRP_OUT" class="floatRight">
+            //            <input type="button" id="LOG_BTN_OUT" class="w80 h26" value="ログアウト" onClick="Click_LOGOUT();">
+            //        </div>';
+            //        };?>
+        </div>
+        <div id="headnaviBground" >
+            <div class="headnavi pl20 pr20 " >
+                <p></p>
+            </div>
+        </div>
+        <div id="headmenuBground">
+            <div class="headmenu pl20 pr20">
+            </div>
+        </div>
+    </div><!-- /Header -->
 
-<!-- ========================================================== -->
-<!-- Foot_Area：Footer											-->
-<!-- ========================================================== -->
-<div id="Foot_Area" class="Fixed_Foot">
-	<div id="footmainBground">
-		<div class="footmain pl20 pr20 clearfix">
-			<p id="footmainLeft" class="floatLeft">
+    <!-- ========================================================== -->
+    <!-- Cont_Area：Contents										-->
+    <!-- ========================================================== -->
+    <div id="Cont_Area" class="Fixed_Cont row"><a name="TOP"></a>
 
-				<?php echo Func_SetEncDate(DF_EN_COPYRIGHT, "<br>", "&nbsp;"); ?>
-				
-			</p>
-			<p id="footmainSpec" class="floatLeft">
-				<?php echo Func_SetEncDate(DF_EN_RECOMMEND, "<br>", "&nbsp;"); ?>
-			</p>
-			<p id="footmainRight" class="floatRight">
-				<a href="#TOP"><img src="./images/tri_U_Red.png" height="12" width="12" alt="矢印">先頭へ戻る</a>
-			</p>
-		</div>
-	</div>
-</div><!-- /Footer -->
-<form name="F999" method="post" autocomplete="off" accept-charset="utf-8">
-	<input type="hidden" name="MSG" id="I_MSG" value="<?php echo Func_SetEncDate($str_msg, "", "\n"); ?>">
-</form>
+        <div id="contmainBground">
+            <div class="contmain pl10 pr10">
+                <div id="contpostDrawing"></div>
+            </div>
+            <div class="event">
+                <p>全富士通労働組合連合会結成 50周年記念行事</p>
+                <p>富士通労働組合単一組織結成 70周年記念事業</p>
+            </div>
+        </div>
+    </div><!-- /Contents -->
+
+    <!-- ========================================================== -->
+    <!-- Foot_Area：Footer											-->
+    <!-- ========================================================== -->
+    <div id="Foot_Area" class="Fixed_Foot">
+        <div id="footmainBground">
+            <div class="footmain pl20 pr20 clearfix">
+                <p id="footmainLeft" class="floatLeft">
+
+                    <?php echo Func_SetEncDate(DF_EN_COPYRIGHT, "<br>", "&nbsp;"); ?>
+
+                </p>
+                <!--			<p id="footmainSpec" class="floatLeft">-->
+                <!--				--><?php //echo Func_SetEncDate(DF_EN_RECOMMEND, "<br>", "&nbsp;"); ?>
+                <!--			</p>-->
+                <p id="footmainRight" class="floatRight">
+                    <a href="#TOP"><img src="./files/tri_U_Red.png" height="12" width="12" alt="矢印">先頭へ戻る</a>
+                </p>
+            </div>
+        </div>
+    </div><!-- /Footer -->
+    <form name="F999" method="post" autocomplete="off" accept-charset="utf-8">
+        <input type="hidden" name="MSG" id="I_MSG" value="<?php echo Func_SetEncDate($str_msg, "", "\n"); ?>">
+    </form>
+</div>
 
 
 
 </body>
+
 </html>

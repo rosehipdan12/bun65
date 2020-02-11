@@ -43,24 +43,26 @@ a img {
 #contpostPage fieldset {
 	border-style: double;
 	border-width: 5px;
-	border-color: #000044;
+	border-color: #114072;
+	border-radius: 10px;
 }
 
 #contpostPage fieldset legend {
+	font-size:16px;
 	border-style: solid;
-	border-width: 3px;
-	border-color: #000044;
-	padding:0px;
-	padding-left: 10px;
-	padding-right: 10px;
-	background-color: #2F4F4F;
+	border-width: 2px;
+	border-color: #0a4748;
+	border-radius: 5px;
+	padding:5px 10px;
+	background-color: #4c6f95;
 	color: #FFFFFF;
 }
+#contpostPage fieldset legend h1 {font-weight: normal;}
 
 #contpostPage fieldset dt.headline {
 	border-style: solid;
 	border-width: 1px;
-	border-color: #000044;
+	border-color: #444;
 	margin: 10px 0px;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -74,14 +76,14 @@ a img {
 #contpostPage fieldset .ErrMsg {
 	border-style: solid;
 	border-width: 1px;
-	border-color: #000044;
+	border-color: #444;
 	background-color: #fffff0;
 	color: #FF0000;
 }
 #contpostPage fieldset .MsgMsg {
 	border-style: solid;
 	border-width: 1px;
-	border-color: #000044;
+	border-color: #444;
 	background-color: #fffff0;
 	color: #000000;
 }
@@ -89,32 +91,39 @@ a img {
 /*> contpostPage-fieldset:ABOUT
 -*------------------------------*/
 #contpostPage.page_ab fieldset {
-	background-color: #FAEBD7;
+	background-color: #e7e0d7;
 }
 
 #contpostPage.page_ab fieldset dt.headline {
-	background-color: #FFA07A;
+	background-color: #ddd1c5;
 	color: #333333;
+	font-size:14px;
+	padding:5px 10px;
 }
 /*> contpostPage-fieldset:RANK
 -*------------------------------*/
 #contpostPage.page_rk fieldset {
-	background-color: #FAD7F7;
+	background-color: #e2ced7;
 }
 
 #contpostPage.page_rk fieldset dt.headline {
-	background-color: #800080;
+	background-color: #9b5677;
 	color: #FFFFFF;
+	font-size:14px;
+	padding:5px 10px;
 }
 /*> contpostPage-fieldset:RIKI
 -*------------------------------*/
 #contpostPage.page_ri fieldset {
-	background-color: #D8FCBA;
+	background-color: #dae2e9;
 }
 
 #contpostPage.page_ri fieldset dt.headline {
-	background-color: #2E8B57;
+	background-color: #4c6f95;
 	color: #FFFFFF;
+	font-size:14px;
+	line-height:1.5em;
+	padding:5px 10px;
 }
 
 /*> contpostPage-fieldset:RAKU
@@ -130,12 +139,25 @@ a img {
 
 /*> 
 -*------------------------------*/
-#LoginPage fieldset          { background-color: #ffffff; padding: 2px; margin: 15px auto; border-style: solid; border-width: 4px; border-color: #eac435; border-radius: 8px; max-width: 480px; }
-#LoginPage div.cont          { background-color: #eac435; padding: 10px; }
-#LoginPage h1                { font-size: 12px; line-height: 20px; padding-bottom: 5px; border-bottom: solid 1px #ffffff; color:#0f3d71;}
-#LoginPage div.info          { font-size: 12px; line-height: 15px; padding: 10px; color:#0f3d71; }
-#LoginPage div.form          { font-size: 12px; line-height: 20px; margin: auto; color:#0f3d71; }
+#LoginPage fieldset          { background-color: #ffffff; padding: 2px; margin: 15px auto; border-style: solid; border-width: 4px; border-color: #2c7db5; border-radius: 8px; max-width: 640px; }
+#LoginPage div.cont          { background-color: #2c7db5; padding: 20px; }
+#LoginPage h1                { color: #eac435;font-size: 18px; line-height: 20px; text-align: center;margin-bottom:15px; padding:8px 0; border-top: 2px solid #eac435; border-bottom: 2px solid #eac435;}
+#LoginPage div.info          { font-size: 14px; line-height: 1.4em; margin-bottom:10px; padding: 10px; color:#fff; }
+#LoginPage div.form          { font-size: 14px; line-height: 20px; margin: auto; color:#fff; }
 #LoginPage input[type="text"]{ padding: 4px; width: 200px; }
+
+/* 20200206追記 */
+.resButton{
+	display: none;
+}
+div.event {
+	width:100%;
+	background: #fff;
+	text-align: center;
+	padding:5px 0;
+	bottom:0;
+}
+.dispTd input {font-size:14px;}
 
 /*> 
 -*------------------------------*/
@@ -154,8 +176,8 @@ div.srt_tools label:hover    { background-color: #48d1cc; }
 
 /*> gallery-list
 -*------------------------------*/
-ul.gallery .setting          { float:left; background-color: #EBEBEB; border: 1px solid #A9A9A9; margin:10px 10px 0px 0px; }
-ul.gallery .setReady         { border: 1px solid #FF0000; }
+ul.gallery .setting          { float:left; background-color: #EBEBEB; border: 2px solid #A9A9A9; margin:10px 10px 0px 0px; }
+ul.gallery .setReady         { border: 2px solid #cc3030; }
 
 /*> photo-setting area
 -*------------------------------*/
@@ -221,23 +243,25 @@ dd.modcont .moddata .note    { padding: 5px; }
 -*------------------------------*/
 table.rnk_tbl                { border-collapse: collapse; margin: auto; border: 1px solid #A9A9A9; }
 /*--*/
-.nowRank1                    { background-color: #FFE03A; border-right: 1px solid #A9A9A9; width:100px; }
-.nowRank2                    { background-color: #C0C0C0; border-right: 1px solid #A9A9A9; width:100px; }
-.nowRank3                    { background-color: #CD853F; border-right: 1px solid #A9A9A9; width:100px; }
+.nowRank1                    { background:url("../images/backgrounds/bar_golden.png") center center repeat-y; border-right: 1px solid #A9A9A9; width:100px; }
+.nowRank2                    { background:url("../images/backgrounds/bar_silver.png") center center repeat-y; border-right: 1px solid #A9A9A9; width:100px; }
+.nowRank3                    { background:url("../images/backgrounds/bar_bronze.png") center center repeat-y; border-right: 1px solid #A9A9A9; width:100px; }
 .fixRank1                    { background-color: #FFD700; border-right: 1px solid #A9A9A9; width:100px; background-image: url("../images/bar_golden.png"); background-repeat: repeat-y; }
 .fixRank2                    { background-color: #C0C0C0; border-right: 1px solid #A9A9A9; width:100px; background-image: url("../images/bar_silver.png"); background-repeat: repeat-y; }
 .fixRank3                    { background-color: #C47222; border-right: 1px solid #A9A9A9; width:100px; background-image: url("../images/bar_bronze.png"); background-repeat: repeat-y; }
-.Unranked                    { background-color: #F0E68C; border-right: 1px solid #A9A9A9; width:100px; }
+.Unranked                    { background-color: #dae2e9; border-right: 1px solid #A9A9A9; width:100px; }
 .Noranked                    { background-color: #000000; border-right: 1px solid #A9A9A9; width:100px; color: #FFFFFF;}
 /*--*/
 .rankmenu                    { display: table; }
-.rankmenu li                 { display: table-cell; text-align: center; white-space: nowrap; }
+.rankmenu li                 { text-align: center; white-space: nowrap; float: left; position: relative; top:0; z-indx:1;}
 .rankmenu li.text            { padding: 2px 5px; }
-.rankmenu li.menu            { background-color: #666666; color: #EEEEEE; border: 1px solid #333333; padding: 2px 15px; cursor: pointer; }
-.rankmenu li.active          { background-color: #FFFFFF; color: #000000; }
+.rankmenu li.menu            { background-color: #aaa; color: #000; font-size:14px; border:1px solid #333; border-radius: 5px 5px 0 0; margin:0 5px 0 0; padding: 5px 15px; cursor: pointer; }
+.rankmenu li.menu:hover      {background-color:rgba(255,255,255,.2); color:#000; }
+.rankmenu li.active          { background-color: #eaeaea; color: #000000; border-bottom:1px solid #eaeaea; }
 .rankcont                    {  }
 .rankcont li.cont            { display: none; background-color: #EBEBEB; border: 1px solid #333333; padding: 5px; margin: -1px 0px 0px 0px; }
 .rankcont li.active          { display: block; }
+.rankcont li.cont            {font-size:14px;padding:10px;}
 .rankcont span.cnt           { font-size: 10px; }
 /*--*/
 .jump_menu                  { margin-top: -10px; margin-bottom: -8px; text-align: right; white-space: nowrap; }
@@ -248,6 +272,26 @@ table.rnk_tbl                { border-collapse: collapse; margin: auto; border: 
 
 @media screen and (max-width: 768px) {
 	/* 768pxまでの幅の場合に適応される */
+.resButton{
+	display: block;
+}
+
+	#headmainBground .headmain h1{
+		text-size:9px;
+	}
+	 #headmenuBground {
+		display: none;
+	}
+	div.Fixed_Head {
+
+	}
+
+	.spbr {
+		content: "\a";
+		white-space: pre ;
+		height: 1px;
+		display: block !important;
+	}
 	#contmainBground .contmain {
 		padding: 0 !important;
 	}
@@ -277,25 +321,60 @@ table.rnk_tbl                { border-collapse: collapse; margin: auto; border: 
 		margin: 2px !important;
 	}
 	table.frm_tbl {
-		margin: 0;
 		height: auto !important;
 		width: auto !important;
 	}
-/*
-	table.frm_tbl .TL            { background: none; width: 0; height: 0; }
-	table.frm_tbl .TC            { background: none; width: 0; height: 0; }
-	table.frm_tbl .TR            { background: none; width: 0; height: 0; }
-	table.frm_tbl .SL            { background: none; width: 0; height: 0; }
-	table.frm_tbl .IA            { background: none; width: 0; height: 0; }
-	table.frm_tbl .SR            { background: none; width: 0; height: 0; }
-	table.frm_tbl .BL            { background: none; width: 0; height: 0; }
-	table.frm_tbl .BC            { background: none; width: 0; height: 0; }
-	table.frm_tbl .BR            { background: none; width: 0; height: 0; }
-*/
-	table.det_tbl .textLeft .w380{
+
+	.gallery table.det_tbl .textLeft .w380{
 		width: 300px !important;
+		height: fit-content !important;
 	}
-	table.det_tbl .textLeft .w190{
+	.gallery table.det_tbl .textLeft .w190{
 		width: 115px !important;
+		height: fit-content !important;
+	}
+
+	.gallery table.vot_tbl.w200 {
+		width: 120px !important;
+	}
+	#contpostPage .dispTable {
+		display: block;
+	}
+	#contpostPage .dispTd {
+		display: inline-flex;
+	}
+
+	#contpostPage fieldset {
+		padding: 0 5px !important;
+		margin: 0 !important;
+	}
+	#contpostPage dd {
+		padding: 0 !important;
+	}
+
+	dl.modview {
+		bottom: 28px;
+		right: 8px;
+	}
+
+	table.rnk_tbl {
+		display: block;
+		border-collapse: collapse;
+	}
+	table.rnk_tbl > tbody{
+		display: block;
+	}
+	table.rnk_tbl > tbody > tr{
+		display: block;
+	}
+	table.rnk_tbl > tbody > tr > th{
+		display: block;
+		width: 100% !important;
+		border: none;
+		box-sizing: border-box;
+		background-size: contain;
+	}
+	table.rnk_tbl > tbody > tr > td{
+		display: block;
 	}
 }

@@ -59,39 +59,38 @@ header("Pragma: no-cache");
 					<div class="cont">
 						<h1>ログイン画面</h1>
 						<div class="info">
-							従業員番号を入力し、「組合員」もしくは「幹部社員・派遣社員等」のいずれかを
-							選択してから 「　次へ　」 をクリックしてください。<br>
-							（「幹部社員・派遣社員等」を選択された方は作品の閲覧のみとなります）<br>
+                            ○○○で配布された組合アカウント、または×××で配布された組合員アカウントでログインしてください。<br>
+                            組合アカウントでログインした場合は閲覧のみ可能です。<br>
+                            組合員アカウントでログインした場合、閲覧に加え投票が可能となります。<br>
 						</div>
-						<div  class="form" >						
-						<div class="form-inline">
-										<label for="LOG_INP_UID"><span class="label">Username</span>	
-										<input class="form-control ml-2" type="text"   id="LOG_INP_UID" name="INP_UID" value="<?php echo Func_SetEncDate($str_uid, "", "\n"); ?>" maxlength="20">
-										</label>									
-										<label for="LOG_INP_UPW"><span class="label">Password</span>
-										<input class="form-control ml-2" type="password"   id="LOG_INP_UPW" name="INP_UPW" maxlength="20"  value="<?php echo Func_SetEncDate($str_upw, "", "\n"); ?>">	
-										</label>
-	
-										</div>
-							<h6 class="pl5">組合員もしくは幹部社員・派遣社員等を選択</h6>
-							<div class="dispTable pl15 pb5">
-								<div class="custom-control custom-radio custom-control-inline">
-										<input class="custom-control-input" type="radio"  id="LOG_INP_MD1" name="INP_MOD" value="1"<?php if ($str_mod == "1" || Func_NoDataJudge($str_mod) == true) { echo " checked"; } ?>>
-									<label for="LOG_INP_MD1"  class="custom-control-label">
-									組合員								
-									</label>
-								</div>
-								<div class="custom-control custom-radio custom-control-inline">
-									<input class="custom-control-input" type="radio"  id="LOG_INP_MD2" name="INP_MOD" value="0"<?php if ($str_mod == "0") { echo " checked"; } ?>>
-									<label for="LOG_INP_MD2" class="custom-control-label">								
-										幹部社員・派遣社員等
-									</label>
-								</div>
-								<div class="dispTd w110 ">
-									<input type="button"     id="LOG_INP_BTN" name="INP_BTN" class="w80" value="次へ" onClick="Click_LOGIN()">
-								</div>
-							</div>
-						</div>
+
+                        <div class="form dispTable">
+                            <div class="dispTr">
+                                <h2 class="dispTd">ID</h2>
+                                <div class="pl5 pb10 dispTd">
+                                    <label for="LOG_INP_UID">
+                                        <input type="text" id="LOG_INP_UID" name="INP_UID" value=""
+                                               maxlength="20">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="dispTr">
+                                <h2 class="dispTd">パスワード</h2>
+                                <div class="pl5 pb10 dispTd">
+                                    <label for="LOG_INP_UID">
+                                        <input type="password" id="LOG_INP_UPW" name="INP_UPW" value=""
+                                               maxlength="20">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="dispTd">
+                                &nbsp;
+                            </div>
+                            <div class="textRight dispTd">
+                                <input type="button" id="LOG_INP_BTN" name="INP_BTN" class="w80" value="次へ"
+                                       onclick="Click_LOGIN()">
+                            </div>
+                        </div>
 					</div>
 				</fieldset>
 			</div>

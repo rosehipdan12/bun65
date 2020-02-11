@@ -111,13 +111,13 @@ header("Pragma: no-cache");
 	// 	}
 	// }
 
-	if ($str_msg == "" && $str_flg == "login") {
-																		//* 判定：組合員モード(数値)
-		if ($str_mod != "0" && $str_mod != "1") {
-			$str_stt = "NG";
-			$str_msg = "「組合員」もしくは「幹部社員・派遣社員等」を選択してください。";
-		}
-	}
+//	if ($str_msg == "" && $str_flg == "login") {
+//																		//* 判定：組合員モード(数値)
+//		if ($str_mod != "0" && $str_mod != "1") {
+//			$str_stt = "NG";
+//			$str_msg = "「組合員」もしくは「幹部社員・派遣社員等」を選択してください。";
+//		}
+//	}
 	//********************************************************//
 	//* メイン処理「ログイン」
 	//********************************************************//
@@ -142,6 +142,7 @@ header("Pragma: no-cache");
 				$OBJ_Row = mysqli_fetch_assoc($OBJ_Rec);
 				$str_upw_db = $OBJ_Row["Password"];
 				$str_unm = $OBJ_Row["UserName"];
+                $str_mod = $OBJ_Row["UnionMember"];
 				$md5Str = md5($str_upw);
 				
 				if (strcmp($md5Str, $str_upw_db) == 0) {

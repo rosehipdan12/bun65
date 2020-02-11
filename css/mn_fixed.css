@@ -15,15 +15,17 @@
 -*----------------------------------------------------*/
 body.Fixed_body {
 	margin: 0px;
-	padding: 126px 0px 26px 0px;
+
 	width: 100%; height:100%;
 	overflow: auto;
 }
 div.Fixed_Head {
-	width: 100%; height: 126px;
+
+	width: 100%;
 	position: fixed !important;
-	position: absolute; top: 0px; left: 0px;
+	top: 0px; left: 0px;
 	overflow: auto;
+	margin-bottom: 20px;
 }
 div.Fixed_Foot {
 	width: 100%; height: 26px;
@@ -32,9 +34,8 @@ div.Fixed_Foot {
 	overflow: hidden;
 }
 div.Fixed_Cont {
-	width: 100%; height: auto;
-	position: fixed !important;
-	position: absolute; top: 126px; left: 0px; bottom: 26px;
+	width: 100%;height: 100%;
+
 	overflow: auto;
 }
 * html div.Fixed_Cont {
@@ -68,9 +69,11 @@ div.Fixed_Cont {
 /*> header-main
 -*------------------------------*/
 #headmainBground {
-	background-color: #0f3d71;
+	background-color: #0e3d71;
 	width: 100%;
-	height: 44px;
+	height: 100%;
+	padding:10px 0;
+	overflow: hidden;
 }
 #headmainBground .headmain {
 	color: #FFFFFF;
@@ -79,16 +82,21 @@ div.Fixed_Cont {
 }
 #headmainBground .headmain h1 {
 	color: #eac435;
-	font-size: 20px;
+	font-size: 24px;
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
 	line-height: 44px;
+	letter-spacing: 2px;
 	float: left;
 }
 #headmainBground .headmain a {
 	color: #eac435;
 	text-decoration: none;
+	padding:5px 10px;
+	border-top:1px solid #eac435;
+	border-bottom:1px solid #eac435;
 }
 #headmainBground .headevent{
-	background-color: #0f3d71;
+	background-color: #0e3d71;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -98,19 +106,21 @@ div.Fixed_Cont {
 /*> header-navigation
 -*------------------------------*/
 #headnaviBground {
-	background-color: #447db5;
+	background-color: #5284bd;
 	width: 100%;
-	height: 25px;
+	height: 36px;
 }
 #headnaviBground .headnavi {
-	background-color: #447db5;
-	color: #FFFFFF;
+	background-color: #5284bd;
+	color: #fff;
+	font-size:14px;
 	max-width:1800px;
 	min-width: 320px;
 	margin: 0px auto 0px auto;
+	padding-top:6px;
 }
 #headnaviBground .headnavi p{
-	background-color: #447db5;
+	background-color: #5284bd;
 	color: #FFFFFF;
 	font-size: 12px;
 	line-height: 25px;
@@ -119,7 +129,9 @@ div.Fixed_Cont {
 #headmenuBground {
 /*	background-color: #3aa6d5;*/
 	width: 100%;
-	height: 35px;
+	height: 30px;
+	/*border-top:2px solid #0f3d71; 	
+	border-bottom:1px solid #0f3d71;*/
 }
 #headmenuBground .headmenu {
 /*	background-color: #3aa6d5;*/
@@ -147,35 +159,45 @@ ul.navimenu {
 	position: relative;
 	float: left;
 	list-style: none;
+	top:0;
+	z-index:1; 
 }
 ul.navimenu li {
 	float: left;
-	line-height: 25px;
-	margin-right:  2px;
+	line-height: 30px;
+	margin-right:  5px;
     border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
+ul.navimenu > li.rank {margin-left:20px;} 
+/*ul.navimenu > li {
+	border-width:2px;
+	border-style:solid;
+	border-color:#0f3d71; 	
+}*/
+
 ul.navimenu li.nv_str {
 	color: #444444;
 }
 .top {
-	background-color: #2196F3;
+	background-color: #274709;
 }
 .ex{
-	background-color: #673AB7;
+	background-color: #710f6f;
 }
 .kids{
-	background-color: #795548;
+	background-color: #363487;
 }
 .enj{
-	background-color: #FF5722;
+	background-color: #781d1b;
 }
 .rank{
-	background-color: #00BCD4;
+	background-color: #414209;
 }
 ul.navimenu li.nv_pan {
-	background-color: #2F4F4F;
+	background-color: #aaa;
 }
+ul.navimenu li.nv_pan a {color:#000;}
 ul.navimenu li.active {
 }
 ul.navimenu li a {
@@ -186,7 +208,7 @@ ul.navimenu li a {
 	display: block;
 }
 ul.navimenu li a:hover {
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(255,255,255,0.2);
     border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
@@ -195,15 +217,27 @@ ul.navimenu li a.an_tab:hover {
 	text-decoration: none;
 }
 ul.navimenu li a.an_anc:hover {
-	cursor: •pointer;
-	text-decoration: underline;
+	cursor: pointer;
+	/*text-decoration: underline;*/
 }
 ul.navimenu li dd.nv_hid {
 	position: absolute;
 	float: left;
 	left: 0px;
-	padding-top:    10px;
+	padding-top:2px;
 }
+ul.navimenu li dl dd li.active a {
+	background-color:#eaeaea;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.flex-container{
+	display: flex;
+	flex-direction: column;
+	width:100%;
+}
+
 
 /*----------------------------------------------------*-
 -*==> [public]: Fixed_Cont … height: auto
@@ -227,19 +261,19 @@ ul.navimenu li dd.nv_hid {
 /*> footer-main
 -*------------------------------*/
 #footmainBground {
-	background-color: #0f3d71;
+	background-color: #0e3d71;
 	width: 100%;
 	height: 26px;
 }
 #footmainBground .footmain {
-	background-color: #0f3d71;
+	background-color: #0e3d71;
 	color: #FFFFFF;
 	max-width:1800px;
 	min-width: 320px;
 	margin: 0px auto 0px auto;
 }
 #footmainBground .footmain p {
-	background-color: #0f3d71;
+	background-color: #0e3d71;
 	color: #FFFFFF;
 	font-size: 12px;
 	line-height: 26px;
@@ -254,4 +288,80 @@ ul.navimenu li dd.nv_hid {
 	padding-left: 20px;
 	padding-right: 20px;
 }
+
+/* Fixed sidenav, full height */
+.sidenav {
+	height: 100%;
+	width: 0px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right:0;
+	overflow-x: hidden;
+	padding-top: 20px;
+	background-color: #0e3d71;
+	-webkit-transition: width .3s ease-in-out;
+	transition: width .3s ease-in-out;
+}
+.dropdown-btn{
+}
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #818181;
+	display: block;
+	border: none;
+	background: none;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+	color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+	margin-left: 200px; /* Same as the width of the sidenav */
+	font-size: 20px; /* Increased text to enable scrolling */
+	padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+	background-color: green;
+	color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+	display: none;
+	background-color: #262626;
+	padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+	float: right;
+	padding-right: 8px;
+}
+
+@media screen and (max-height: 450px) {
+
+}
+@media screen and (max-width: 768px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+	#headmainBground .headmain h1 {
+		font-size: 9px;
+	}
+	ul.navimenu   {
+	display:none;
+	}
+	}
 
